@@ -5,7 +5,6 @@ const NewTodo = ({ handleTodo }) => {
     const [todo, setTodo] = useState({ title: "", desc: "" })
 
 
-
     const handleChange = event => {
         const name = event.target.name;
         setTodo((oldTodo) => {
