@@ -5,14 +5,13 @@ import { useQuery } from 'react-query';
 
 const Todos = () => {
 
-    const { data: todos, isLoading, refetch } = useQuery('todos', () => fetch('http://localhost:5000/todo').then(res => res.json()))
+    const { data: todos, isLoading, refetch } = useQuery('todos', () => fetch('https://conservative-donair-21272.herokuapp.com/todo').then(res => res.json()))
 
     if (isLoading) {
         return <Loading></Loading>
     }
     return (
-        <div>
-        <h2 className='text-3xl text-accent p-5'>Total Products: {todos.length}</h2>
+        <div className='h-screen'>
         {
             todos.map(todo => <Todo todo={todo} refetch={refetch}></Todo>)
         }

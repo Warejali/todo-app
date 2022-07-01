@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className='mx-32'>
+        <div className='lg:mx-44 my-10'>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -18,11 +18,11 @@ const Navbar = () => {
                     </div>
                     <Link to="/" class="btn btn-ghost normal-case text-xl">MY TASK</Link>
                 </div>
-                <div class="navbar-end hidden lg:flex">
+                <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal p-0">
                         <li><Link to="/">Completed Tasks</Link></li>
                         <li><Link to="/todos">To-Do</Link></li>
-                        <li><Link to="">Calendar</Link></li>
+                        <li><Link to="/calendar">Calendar</Link></li>
                     </ul>
                 </div>
             </div>
